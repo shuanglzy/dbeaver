@@ -175,7 +175,7 @@ public abstract class SQLScriptStatusDialog<T extends DBSObject> extends BaseDia
         UIUtils.packColumns(objectTree, false, null);
         TreeItem treeItem = getTreeItem(object);
         if (treeItem != null) {
-            treeItem.setText(1, error == null ? "Done" : error.getMessage());
+            treeItem.setText(1, error == null ? "Done" : "Failed. See more info in the error log");
             if (error != null) {
                 ColorRegistry colorRegistry = UIUtils.getActiveWorkbenchWindow().getWorkbench().getThemeManager().getCurrentTheme().getColorRegistry();
                 Color colorError = colorRegistry.get(QueryLogViewer.COLOR_REVERTED);
